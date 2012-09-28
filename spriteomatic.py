@@ -141,10 +141,10 @@ class SpriteOMatic(object):
         
         for class_name, img_pos in img_positions.items():
             tmp = CSS_TPL % {'class_name': class_name,
-                             'w': img_pos.get('w'),
-                             'h': img_pos.get('h'),
-                             'x': img_pos.get('x') * -1,
-                             'y': img_pos.get('y') * -1,
+                             'w': "%spx" % img_pos.get('w'),
+                             'h': "%spx" % img_pos.get('h'),
+                             'x': "%spx" % (img_pos.get('x') * -1),
+                             'y': "%spx" % (img_pos.get('y') * -1),
                              }
 
             css += tmp
